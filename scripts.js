@@ -33,11 +33,20 @@ function shade(){
     shadeSwitch=true;
     colorSwitch=false;
 }
+
 function color(){
     colorSwitch=true;
     shadeSwitch=false;
 }
-function setGrid(){}
+
+function setGrid(){
+    const gridSelection=prompt("select number from 2 to 50");
+    if (gridSelection>2 && gridSelection<=50){
+        gridBoxes=gridSelection;
+        reset();
+    }
+}
+
 function reset(){
     generateGrid()
     colorSwitch=false;
@@ -70,5 +79,18 @@ function fillIn(){
     boxColors[key].saturation=saturation    
     boxColors[key].light=light    
 }
+
+function selectButton(){
+    if(this.classList.contains("selected")){    
+        this.classList.remove("selected")
+    }
+    else{
+        pushable.forEach(button=>button.classList.remove("selected"));
+        this.classList.add("selected");
+    };
+}
+
+const pushable=document.querySelectorAll(".pushed")
+pushable.forEach(button=>button.addEventListener("click", selectButton))
 
 generateGrid();

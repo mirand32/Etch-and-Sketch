@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Etch N Sketch</title>
 </head>
 <body>
     <div class="backgroundContainer">
+        <h1>Etch A Sketch</h1>
         <div class="container">
         </div>
-        <div class="buttonMenu">
-            <button onClick="setGrid()">Grid</button>
-            <button onClick="shade()">Shade</button>
-            <button onClick="color()">Colors</button>
-            <button onClick="reset()">Reset</button>
+        <div class="bottomRow">
+            <div><img src="knob.jpg" alt=" round white knob that can be twisted"></div>
+            <div class="buttonMenu">
+                <button onClick="setGrid()">Grid</button>
+                <button class="pushed" onClick="shade()">Shade</button>
+                <button class="pushed" onClick="color()">Colors</button>
+                <button onClick="reset()">Reset</button>
+            </div>
+            <div><img src="knob.jpg" alt="round white knob that can be twisted"></div>
+
         </div>
     </div>
 </body>
